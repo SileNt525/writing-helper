@@ -11,7 +11,7 @@ RUN npm cache clean --force
 FROM node:18-alpine AS runner
 WORKDIR /app
 
-#  package.json  package-lock.json ( yarn.lock)
+#
 COPY --from=builder /app/package*.json ./
 
 #
